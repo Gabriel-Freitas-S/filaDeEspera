@@ -1,30 +1,37 @@
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import io.InOut;
 
 public class UsaCliente {
     // ArrayList para armazenar os clientes
-    private static final ArrayList<Cliente> clientes = new ArrayList<>();
+    private static final LinkedList<Cliente> clientes = new LinkedList<>();
 
     public static void main(String[] args) {
         while (true) {
             int opcao = mostrarMenu();
             switch (opcao) {
                 case 1:
+                    // Gerar senha para novo cliente
                     gerarSenha();
                     break;
                 case 2:
+                    // Atender próximo cliente
                     atendimento();
                     break;
                 case 3:
+                    // Remover cliente da fila
                     sairDaFila();
                     break;
                 case 4:
+                    // Mostrar clientes não atendidos
                     mostrarNaoAtendidos();
                     break;
                 case 0:
+                    // Sair do programa
                     System.exit(0);
                 default:
+                    // Tratar opção inválida
                     mostrarMensagem("Opção inválida! Pressione Enter para continuar.");
             }
         }
@@ -58,7 +65,7 @@ public class UsaCliente {
             mostrarMensagem("Nenhum cliente na fila. Pressione Enter para continuar.");
             return;
         }
-        Cliente cliente = clientes.removeFirst();
+        Cliente cliente = clientes.removeFirst(); // Remove o primeiro cliente da fila (LinkedList)
         mostrarMensagem("Atendendo cliente: " + cliente + ". Pressione Enter para continuar.");
     }
 
