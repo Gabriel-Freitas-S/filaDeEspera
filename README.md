@@ -1,8 +1,9 @@
-# Sistema de Fila de Clientes em Java | Trabalho Liguagens de Programação
+# Trabalho Liguagens de Programação
+## Sistema de Fila de Clientes em Java
 
 Este projeto implementa um sistema de fila de clientes em Java, utilizando interface gráfica e tratamento de exceções.
 
-## Funcionalidades
+### Funcionalidades
 
 O sistema oferece as seguintes funcionalidades:
 
@@ -12,7 +13,7 @@ O sistema oferece as seguintes funcionalidades:
 * **Mostrar clientes não atendidos:** Exibe a lista de clientes que ainda aguardam atendimento.
 * **Sair do programa:** Encerra o sistema.
 
-## Classes
+### Classes
 
 O projeto é composto pelas seguintes classes:
 
@@ -20,7 +21,7 @@ O projeto é composto pelas seguintes classes:
 * **`UsaCliente`:** Contém o método principal (`main`) e a lógica para gerenciar a fila de clientes e a interação com o usuário através de menus e mensagens.
 * **`InOut`:** Classe utilitária para entrada e saída de dados, fornecendo métodos para ler diferentes tipos de dados do usuário e exibir mensagens.
 
-## Implementação
+### Implementação
 
 * A fila de clientes é implementada utilizando um `ArrayList`.
 * A interface gráfica é implementada utilizando a classe `JOptionPane`.
@@ -28,12 +29,12 @@ O projeto é composto pelas seguintes classes:
 * O sistema gera senhas sequenciais para cada novo cliente.
 * As funcionalidades do sistema são acessíveis através de um menu interativo.
 
-## Como executar
+### Como executar
 
 1. Compile e execute a classe `UsaCliente`.
 2. Utilize o menu interativo para realizar as operações desejadas.
 
-## Observações
+### Observações
 
 * O código foi desenvolvido em Java e utiliza conceitos de orientação a objetos.
 * O sistema inclui tratamento de exceções para garantir a robustez da aplicação.
