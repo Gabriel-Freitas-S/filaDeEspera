@@ -1,12 +1,11 @@
 public class Cliente {
+    // Atributos de classe: geradorDeSenha e senhaDeAtendimento
+    private static int geradorDeSenha = 1;
+    private static int senhaDeAtendimento = 0; 
 
-    // Atributos de classe: geradorDeSenha 
-    private static int geradorDeSenha = 1; 
-
-    // Atributos de instância: senhaDoCliente, nome e endereco
-    private final int senhaDoCliente; // Senha do cliente, gerada automaticamente e imutável
-    private final String nome; // Nome do cliente, imutável após a criação
-    private String endereco; // Endereço do cliente
+    // Atributos de instância: senhaDoCliente e nome
+    private final int senhaDoCliente; 
+    private String nome; 
 
     /**
      * Construtor da classe Cliente.
@@ -15,10 +14,10 @@ public class Cliente {
      */
     public Cliente(String nome) {
         this.nome = nome;
-        this.senhaDoCliente = geradorDeSenha++; // Atribui a próxima senha disponível e incrementa o gerador
+        this.senhaDoCliente = geradorDeSenha++; // Atribui a próxima senha e incrementa o gerador
     }
 
-    // Métodos getters para senhaDoCliente e nome 
+    // Métodos getters para senhaDoCliente e nome
     public int getSenhaDoCliente() {
         return senhaDoCliente;
     }
@@ -26,23 +25,29 @@ public class Cliente {
     public String getNome() {
         return nome;
     }
-
-    public String getEndereco() {
-        return endereco;
+    
+    // Método set para atribuir o nome
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    // Método setter para o endereço
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    /**
+     * Método proximo() para incrementar e retornar a senha de atendimento.
+     * 
+     * @return A próxima senha de atendimento.
+     */
+    public static int proximo() {
+        senhaDeAtendimento++;
+        return senhaDeAtendimento;
     }
 
     /**
      * Método toString para exibir informações do cliente.
      * 
-     * @return Uma string contendo o nome, senha e endereço do cliente.
+     * @return Uma string contendo o nome e senha do cliente.
      */
     @Override
     public String toString() {
-        return "Nome: " + nome + ", Senha: " + senhaDoCliente + ", Endereco: " + endereco;
+        return "Nome: " + nome + ", Senha: " + senhaDoCliente;
     }
 }
