@@ -1,4 +1,4 @@
-# Trabalho Liguagens de Programação
+# Trabalho Linguagem de Programação
 ## Sistema de Fila de Clientes em Java
 
 Este projeto implementa um sistema de fila de clientes em Java, utilizando interface gráfica e tratamento de exceções.
